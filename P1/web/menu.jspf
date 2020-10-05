@@ -1,3 +1,9 @@
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
-<h2>Hello World!</h2>
+
+<header>
+
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <a href="index.jsp" class="btn btn-primary"  style="border-color: rgb(43, 204, 107); background-color: rgb(46, 204, 107)">INÍCIO</a>
+        <a href="disciplinas.jsp" class="btn btn-primary"  style="border-color: rgb(43, 204, 107); background-color: rgb(46, 204, 107)">DISCIPLINAS</a>
+        <a href="sobre.jsp" class="btn btn-primary"  style="border-color: rgb(43, 204, 107); background-color: rgb(46, 204, 107)">SOBRE</a>
+    </div>
+</header>
