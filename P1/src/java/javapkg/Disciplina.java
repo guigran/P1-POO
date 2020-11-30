@@ -9,12 +9,11 @@ public class Disciplina {
     int ciclo;
     float nota;
 
-    ArrayList<Disciplina> disciplinas = new ArrayList<>();
-
-    public Disciplina(String nome, String ementa, int ciclo) {
+    public Disciplina(String nome, String ementa, int ciclo, float nota) {
         this.nome = nome;
         this.ementa = ementa;
         this.ciclo = ciclo;
+        this.nota = nota;
     }
 
     public String getNome() {
@@ -36,17 +35,13 @@ public class Disciplina {
     public void setNota(float nota) {
         this.nota = nota;
     }
-
-    public void setList(ArrayList<Disciplina> list) {
-        disciplinas = list;
+    
+    public static String getCreateStatement(){
+        return "CREATE TABLE IF NOT EXISTS disciplinas("
+						+ "nome VARCHAR(50) UNIQUE NOT NULL,"
+						+ "ementa VARCHAR(200) NOT NULL,"
+						+ "ciclo int,"
+						+ "nota float )";
     }
-
-    public void addDisciplina(Disciplina disciplina) {
-        disciplinas.add(disciplina);
-    }
-
-    public ArrayList<Disciplina> getList() {
-        return disciplinas;
-    }
-
+    
 }
