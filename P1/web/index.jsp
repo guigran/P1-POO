@@ -1,50 +1,6 @@
 <%@page import="javapkg.Disciplina" %>
 <%@page import="java.util.Set" %>
 
-
-
-<%
-Disciplina disciplina = new Disciplina(null,null,0);
-disciplina = (Disciplina) application.getAttribute("disciplinas");
-
-     if (disciplina == null) {
-         disciplina = new Disciplina(null,null,0);
-         
-         
-         Disciplina POO = new Disciplina("Programação Orientada a Objetos: ", "Conceitos e evolução da tecnologia de orientação a objetos.", 4);
-         Disciplina ES3 = new Disciplina("Engenharia de Software III: ", "Conceitos, evolução e importância de arquitetura de software.", 4);
-         Disciplina BD = new Disciplina("Banco de Dados: ", "Conceitos de Base de Dados. Modelos conceituais de informações.", 4);
-         Disciplina MTD = new Disciplina("Metodologia de Pesquisa: ", "O Papel da ciência e da tecnologia. Tipos de conhecimento. Método e técnica.", 4);
-         Disciplina SO2 = new Disciplina("Sistemas Operacionais II: ", "Apresentação de um sistema operacional específico utilizado em ambiente corporativo.", 4);
-         Disciplina LP4 = new Disciplina("Linguagem de Programação IV: ", "Comandos de linguagens usadas na construção e estruturação de sites para a Web.", 4);
-         Disciplina SGI = new Disciplina("Segurança da Informação: ", "Requisitos de segurança de aplicações, de base de dados e de comunicações.", 4);
-    
-        disciplina.addDisciplina(POO);
-        disciplina.addDisciplina(ES3);
-        disciplina.addDisciplina(BD);
-        disciplina.addDisciplina(MTD);
-        disciplina.addDisciplina(SO2);
-        disciplina.addDisciplina(LP4);
-        disciplina.addDisciplina(SGI);
-    
-    application.setAttribute("disciplinas", disciplina);
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
@@ -77,9 +33,9 @@ disciplina = (Disciplina) application.getAttribute("disciplinas");
                 <h1 class="jumbotron-heading">Guilherme G. A Teodoro</h1>
                 <p class="lead text-muted">RA:&nbsp;<span style="white-space:pre">	</span>1290481913050</p>
                 <p class="lead text-muted">MATÉRIAS EM CURSO:&nbsp;<span style="white-space:pre">	</span><%
-if (disciplina !=null) 
+if (Disciplina.getList() !=null) 
 {
-out.print(disciplina.getList().size());
+out.print(Disciplina.getList().size());
 
 }
 %></p>

@@ -20,7 +20,7 @@ import javax.servlet.ServletContextListener;
  */
 public class DbListener implements ServletContextListener {
 private static final String CLASS_NAME = "org.sqlite.JDBC";
-    private static final String DB_URL = "jdbc:sqlite:disciplinas.db";
+    private static final String DB_URL = "jdbc:sqlite:disciplinas2.db";
     
     public static String exceptionMessage = null;
 
